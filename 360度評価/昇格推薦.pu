@@ -1,0 +1,46 @@
+@startuml
+top to bottom direction
+
+hide circle
+hide method
+
+package 360度評価 {
+
+    
+    package レポート設定集約 {
+        object レポート設定{
+            ID
+            レポート提出が必要か
+            役職層
+            テーマ
+            文字数
+        }
+
+        object 役職層{
+
+        }
+
+        object 現役職層マスタ {
+            セクション層
+            通常役職層リスト
+            +対象役職層取得(現役職ID,現役職レベル)
+        }
+
+        object セクション層{
+            役職層名
+            対象役職IDリスト
+        }
+
+        object 通常役職層{
+            役職層名
+            役職レベル
+        }
+        役職層 <|-down- セクション層
+        役職層 <|-down- 通常役職層
+        現役職層マスタ *-down- 役職層
+        note left of 現役職層マスタ
+        ・現役職層マスタから初期レポート設定の元となる
+        end note
+    }
+}
+@enduml
