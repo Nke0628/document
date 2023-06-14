@@ -4,42 +4,38 @@ top to bottom direction
 hide circle
 hide method
 
-package 360度評価 {
+package 昇格推薦レポート {
 
-    
     package レポート設定集約 {
         object レポート設定{
             ID
-            レポート提出が必要か
-            役職層
+            レポート設定有無
             テーマ
             文字数
         }
 
-        object 役職層{
+        object レポート設定リスト{
+            ID
+            評価期間ID
+            設定者skyID
+            設定日
+        }
+
+        object 役職層 {
 
         }
 
-        object 現役職層マスタ {
-            セクション層
-            通常役職層リスト
-            +対象役職層取得(現役職ID,現役職レベル)
-        }
-
-        object セクション層{
-            役職層名
-            対象役職IDリスト
-        }
-
-        object 通常役職層{
-            役職層名
-            役職レベル
-        }
-        役職層 <|-down- セクション層
-        役職層 <|-down- 通常役職層
-        現役職層マスタ *-down- 役職層
-        note left of 現役職層マスタ
-        ・現役職層マスタから初期レポート設定の元となる
+        レポート設定リスト *-down- レポート設定 : 1 .. n
+        レポート設定 *-down- 役職層
+        note left of レポート設定
+        ・テーマ自体の制限なし
+        ・文字数の制限なし
+        　※社長層は対象外
+        end note
+        note left of 役職層
+        ・セクション層=降格役職
+        ・それ以外=役職レベル単位
+        　※社長層は対象外
         end note
     }
 }
