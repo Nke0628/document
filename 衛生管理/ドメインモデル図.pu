@@ -1,0 +1,138 @@
+@startuml
+top to bottom direction
+
+hide circle
+hide method
+
+package 360度評価 {
+
+    package 360度評価集約{
+        
+        object 360度評価リスト {
+            + ノルマ計算()
+        }
+        object 360度評価 {
+            ID
+            評価期間ID
+            査定値ID
+            良い点
+            改善点
+            お客様からの評価か
+            提出状況
+        }
+        object 提出者 {
+            skyID
+        }   
+        object 対象者 {
+            skyID
+        }          
+        object 役職 {
+            役職ID
+            役職レベル
+            管理職フラグ
+        }   
+        360度評価リスト *-down- 360度評価
+        360度評価 *-right- 提出者
+        360度評価 *-right- 対象者
+        提出者 *-down- 役職
+        対象者 *-down- 役職
+        note bottom of 360度評価
+        ・提出状況は「未提出」「一時保存」「提出」
+        ・提出→一時保存は不可
+        end note
+        note right of 360度評価リスト
+        ノルマ仕様
+        ・管理職(課長代理以上)
+        評定経路外の上中下問わず管理職に3人
+        ・リーダ〜係長
+        評定経路外の上中下に3人
+        ・一般以下
+        評定経路外の上中に2人
+        ※EGG、EGGアシスタントは一般と同等レベルとみなす
+        ※ノルマは360度評価終了日時点の評定経路者、役職の関係から算出する
+        end note
+        note right of 役職
+        ・ノルマ仕様上、役職は評価期間終了日時点の役職
+        end note
+    }
+
+
+    package 評定経路集約{
+        object 評定経路 {
+            評価期間ID
+            skyID
+        }
+        object 評定経路者リスト {
+            評定経路者skyID
+        }
+    } 
+    評定経路 *-down- 評定経路者リスト : 1..n
+    360度評価リスト -left-> 評定経路
+
+    package 評価期間集約{
+        object 評価期間リスト {
+        }
+
+        object 評価期間 {
+            ID
+            期間名称
+            360度評価開始日
+            360度評価終了日
+        }
+    }
+    評価期間リスト *-down- 評価期間 : 1..n
+    360度評価 -left-> 評価期間 
+
+    package 査定値集約 {
+        object 査定値リスト {
+        }
+
+        object 査定値 {
+            ID
+            査定値
+        }
+    }
+    査定値リスト *-down- 査定値 : 1..n
+
+    package 免除申請集約{
+        object 管理職免除申請 {
+            ID
+            評価期間ID
+            申請理由
+            免除人数
+            申請状況
+            差戻理由
+        }
+        object 管理職以外免除申請 {
+            ID
+            評価期間ID
+            申請理由
+            上司免除
+            同僚免除
+            部下免除
+            申請状況
+            差戻理由
+        }
+        object 申請者 {
+            skyID
+            役職レベル
+        }  
+        object 認可者 {
+            skyID
+            部署ID
+        }   
+        note bottom of 申請者
+        ・ノルマ仕様上、役職は360度評価締切日時点の役職
+        end note
+        note bottom of 管理職免除申請
+        ・申請状況は最新の状態を表すものとする
+        ・未申請、申請中、認可、差戻、免除
+        ・未申請→申請中
+        ・申請中→認可or差戻
+        ・認可→なし
+        ・差戻→申請∂
+        ・免除→なし
+        end note
+    }
+}
+@enduml
