@@ -1,11 +1,14 @@
 <mxfile host="65bd71144e">
     <diagram id="9EdsXqn_Y-Ji-udo9zcP" name="ページ1">
-        <mxGraphModel dx="1151" dy="1240" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel dx="1583" dy="1705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
-                    <mxGeometry x="10" y="80" width="1080" height="830" as="geometry"/>
+                    <mxGeometry x="10" y="80" width="1260" height="830" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="990" y="115" width="270" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;出生前&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=#36393d;" vertex="1" parent="1">
                     <mxGeometry x="200" y="120" width="380" height="60" as="geometry"/>
@@ -114,6 +117,30 @@
                 </mxCell>
                 <mxCell id="65" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;特になし&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
                     <mxGeometry x="860" y="770" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;出生前&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;出生後&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="1130" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;出生児育児休業&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="190" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;育児休業&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="1130" y="190" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;休業中画面&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="260" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;特になし&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;申請画面&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="1130" y="260" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="&lt;font color=&quot;#18141d&quot;&gt;&lt;b&gt;特になし&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+                    <mxGeometry x="1130" y="560" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
